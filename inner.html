@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<!--document è un oggetto che rappresenta l'intero documento HTML.
+getElementById("demo") è un metodo dell'oggetto document che restituisce l'elemento HTML con id="demo".
+.innerHTML è una proprietà dell'elemento HTML restituito, che permette di modificarne il contenuto.
+Quindi, il metodo getElementById appartiene all'oggetto document e serve per selezionare un elemento specifico nella pagina web.-->
+<!--Se document fosse una classe, potremmo immaginarla in questo modo:-->
+<!--class Document {
+    getElementById(id) {
+        // Simula il recupero di un elemento con un certo ID
+        return new Element(id);
+    }
+}
+
+class Element {
+    constructor(id) {
+        this.id = id;
+        this.innerHTML = "";
+    }
+}
+
+const document = new Document(); // Creiamo un'istanza della classe Document
+
+document.getElementById("demo").innerHTML = "Hello JavaScript"; // Funzionerebbe in modo simile a quello reale
+-->
+
+<!--Il codice funziona perché il JavaScript è scritto direttamente nell'attributo onclick del pulsante come event handler inline.-->
+<!--L'attributo onclick accetta del codice JavaScript come valore.
+Il codice document.getElementById("demo").innerHTML = "Hello JavaScript!" viene eseguito quando il pulsante viene cliccato.
+Anche se il codice JavaScript non è racchiuso esplicitamente dentro un tag <script>, il browser lo interpreta comunque come JavaScript perché 
+    si trova nell'attributo di un evento (onclick).-->
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+</body>
+</html>
